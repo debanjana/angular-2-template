@@ -1,0 +1,46 @@
+<table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Title </td>
+                <td>Year </td>
+                <td>Poster <td>
+                <td>Plot</td>
+            </tr>
+        </thead>
+        <tbody>
+       <tr *ngFor ="#m of movies" >
+                <td>{{m.title}} </td>
+                <td>{{m.year}}</td>
+                <img src="{{m.poster}}"/>
+                <td>{{m.plot}}</td>
+                <td>
+                    <div>
+                        
+                        <div>This demos two way binding</div>
+                        <div><label>id: </label>{{m.title}}</div>
+                        <div>
+                        <label>title: </label>
+                        <input [(ngModel)]="m.title" placeholder="title">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" required
+                            [(ngModel)]="m.title"
+                            name="name"  #spy >
+                            <!--
+                                Using ngModel in a form gives us more than just two
+                                 way data binding. It also tells us if the user touched
+                                  the control, if the value changed, or if the value
+                                   became invalid.The NgModel directive doesn't just track
+                                    state; it updates the control with special Angular CSS 
+                                    classes that reflect the state. We can leverage those 
+                                    class names to change the appearance of the control and make 
+                                    messages appear or disappear. 
+                                    We use #spy here as a temporary "template reference variable" .-->
+                            <br>Status :  {{spy.className}}
+                        </div>
+                     </div>
+                 </td>
+        </tr>
+
+         </tbody>
+</table>
