@@ -1,7 +1,7 @@
 ![](http://i.imgur.com/CqXcsZ9.png)
 
 This is a base template for Angular 2. It contains the core files you will need when starting an Angular 2 project.
-### This also containes a hardcoded list of movies which are dsplayed.
+### This also contains a hardcoded list of movies which are dsplayed.
 To get started, follow the instructions below.
 
 ### Install Node.js and npm
